@@ -1,0 +1,2 @@
+Em nosso projeto estamos utilizando os serviços da IBM STT e TTS "Speech to text e Text to speech" ambos estão sendo utilizados para conversão e manipulação dos dados do usuario enviados ao Watson.
+Os serviço STT é capaz de converter a entrada de voz do usuario para texto e o mesmo gerado pelo serviço é enviado ao TTS que é o serviço responsavel por interpretar o texto enviado como parametro e sintetizar a vóz que irá ser escutada pelo usuario.

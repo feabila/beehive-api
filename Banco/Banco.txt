@@ -1,0 +1,1137 @@
+--------------------------------------------------------
+--  Arquivo criado - Quarta-feira-Outubro-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BH_USUARIO
+--------------------------------------------------------
+
+  CREATE TABLE "RM82767"."BH_USUARIO" 
+   (	"ID_USUARIO" NUMBER, 
+	"NM_USUARIO" VARCHAR2(90 BYTE), 
+	"NM_EMAIL_USUARIO" VARCHAR2(90 BYTE), 
+	"NM_SENHA_USUARIO" VARCHAR2(35 BYTE), 
+	"NM_SEXO_USUARIO" VARCHAR2(12 BYTE), 
+	"NR_CEL_USUARIO" VARCHAR2(20 BYTE), 
+	"DT_NASC_USUARIO" VARCHAR2(20 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."ID_USUARIO" IS 'Essa coluna irá receber o código do usuário, que deverá ser numérico, obrigatório e único.';
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."NM_USUARIO" IS 'Essa coluna irá receber o nome do usuário, que deverá ser String e obrigatório';
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."NM_EMAIL_USUARIO" IS 'Essa coluna irá receber o e-mail do usuario, que deverá ser String e obrigatório.';
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."NM_SENHA_USUARIO" IS 'Essa coluna irá receber a senha do usuário, que deverá ser String e obrigatória';
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."NM_SEXO_USUARIO" IS 'Essa coluna irá receber o sexo do usuário. Conteúdos possíveis: Masculino, Feminino e outro.';
+   COMMENT ON COLUMN "RM82767"."BH_USUARIO"."NR_CEL_USUARIO" IS 'Essa coluna irá receber o número de Celular do usuário, que será String e opcional';
+REM INSERTING into RM82767.BH_USUARIO
+SET DEFINE OFF;
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('2','Henrique','henriquesmagana@gmail.com','gabrielgay','Masculino','(11) 96642-3220','12/06/1999');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('44','Lucas','lucasc.trabalhos@gmail.com','123456','Masculino','(11) 99017-6067','11/01/1999');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('3','Felipe','felipeabila@hotmail.com','GabrielAnimal','Masculino','(11) 94289-6162','18/09/2001');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('5','Diego orosz','diegorosz@hotmail.com','asdfgh','Masculino','(11) 96096-1599','16/09/2000');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('7','Luiz','luiz@damasceno.com','123456','Outros','(11) 94667-0455','23/04/1997');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('23','Julia AssunÃ§Ã£o','juliaassuncao13@gmail.com','Bubble@1909','Feminino','(11) 94189-2119','19/02/1998');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('24','Leonardo','Srleon19@hotmail.com','leonardo','Masculino','(11) 96838-0577','19/05/1995');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('1','asdasd','boomboxsaga@gmail.com','asdfgh','Masculino','(11) 96096-1599','16/09/2000');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('26','user teste','user@teste.com','userteste','Masculino','(12) 31231-2312','16/09/2000');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('43','Lucas Ferreira Cardoso ','lucas.fc2001@yahoo.com.br','160701','Masculino','(11) 97134-8560','16/07/2001');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('4','Emerson Vitorio de Oliveira','emerson_vitorio@live.com','estoucomsono','Masculino','(11) 94667-0455','23/04/1997');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('27','Gabriel Diogo','gabriel.san.diogo@outlook.com','131609','Masculino','(12) 31231-2313','16/09/2000');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('6','Pedro Madi Della Coletta','pmdevelopbackup@gmail.com','654321','Masculino','(11) 98887-6828','27/07/1996');
+Insert into RM82767.BH_USUARIO (ID_USUARIO,NM_USUARIO,NM_EMAIL_USUARIO,NM_SENHA_USUARIO,NM_SEXO_USUARIO,NR_CEL_USUARIO,DT_NASC_USUARIO) values ('25','Fiap','fiap@fiap.com','fiapfiap','Masculino','(13) 12312-3123','16/09/2000');
+--------------------------------------------------------
+--  DDL for Index BH_USUARIO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "RM82767"."BH_USUARIO_PK" ON "RM82767"."BH_USUARIO" ("ID_USUARIO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+--------------------------------------------------------
+--  DDL for Trigger BH_USUARIO_TRG1
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "RM82767"."BH_USUARIO_TRG1" 
+BEFORE INSERT ON BH_USUARIO 
+FOR EACH ROW 
+BEGIN
+  <<COLUMN_SEQUENCES>>
+  BEGIN
+    IF INSERTING AND :NEW.ID_USUARIO IS NULL THEN
+      SELECT BH_USUARIO_SEQ1.NEXTVAL INTO :NEW.ID_USUARIO FROM SYS.DUAL;
+    END IF;
+  END COLUMN_SEQUENCES;
+END;
+/
+ALTER TRIGGER "RM82767"."BH_USUARIO_TRG1" ENABLE;
+--------------------------------------------------------
+--  DDL for Trigger BH_USUARIO_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "RM82767"."BH_USUARIO_TRG" 
+BEFORE INSERT ON BH_USUARIO 
+FOR EACH ROW 
+BEGIN
+  <<COLUMN_SEQUENCES>>
+  BEGIN
+    NULL;
+  END COLUMN_SEQUENCES;
+END;
+/
+ALTER TRIGGER "RM82767"."BH_USUARIO_TRG" ENABLE;
+--------------------------------------------------------
+--  Constraints for Table BH_USUARIO
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_USUARIO" ADD CONSTRAINT "BH_USUARIO_PK" PRIMARY KEY ("ID_USUARIO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS"  ENABLE;
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("ID_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("NM_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("NM_EMAIL_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("NM_SENHA_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("NM_SEXO_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("NR_CEL_USUARIO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_USUARIO" MODIFY ("DT_NASC_USUARIO" NOT NULL ENABLE);
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+--  Arquivo criado - Quarta-feira-Outubro-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BH_AVALIACAO
+--------------------------------------------------------
+
+  CREATE TABLE "RM82767"."BH_AVALIACAO" 
+   (	"ID_AVALIACAO" NUMBER, 
+	"ID_USUARIO" NUMBER, 
+	"CD_RESP_A" NUMBER, 
+	"NM_RESP_A" CLOB, 
+	"CD_RESP_B" NUMBER, 
+	"NM_RESP_B" CLOB, 
+	"CD_ESTRELA" NUMBER, 
+	"DT_AVALIACAO" DATE
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" 
+ LOB ("NM_RESP_A") STORE AS BASICFILE (
+  TABLESPACE "TBSPC_ALUNOS" ENABLE STORAGE IN ROW CHUNK 8192 RETENTION 
+  NOCACHE LOGGING 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) 
+ LOB ("NM_RESP_B") STORE AS BASICFILE (
+  TABLESPACE "TBSPC_ALUNOS" ENABLE STORAGE IN ROW CHUNK 8192 RETENTION 
+  NOCACHE LOGGING 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)) ;
+
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."ID_AVALIACAO" IS 'Essa coluna irá receber o código identificador de cada avaliação realizada pelo usuário, que deverá ser numérico, obrigatório e único.';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."CD_RESP_A" IS 'Essa coluna irá receber o código da primeira resposta do usuário da avaliação, que deverá numérico e opcional';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."NM_RESP_A" IS 'Essa coluna irá receber o texto da primeira resposta do usuário da avaliação, que deverá texto e opcional';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."CD_RESP_B" IS 'Essa coluna irá receber o código da segunda resposta do usuário da avaliação, que deverá numérico e opcional';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."NM_RESP_B" IS 'Essa coluna irá receber o texto da segunda resposta do usuário da avaliação, que deverá texto e opcional';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."CD_ESTRELA" IS 'Essa coluna irá receber o código da terceira resposta do usuário da avaliação (em formato de estrelas), que deverá numérico e opcional';
+   COMMENT ON COLUMN "RM82767"."BH_AVALIACAO"."DT_AVALIACAO" IS 'Essa coluna irá receber a data da realização da avaliação, que deverá ser em formato de data e opcional.';
+REM INSERTING into RM82767.BH_AVALIACAO
+SET DEFINE OFF;
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('30','6','2','1','2',to_date('09/10/19','DD/MM/RR'));
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('31','7','1','2','5',to_date('09/10/19','DD/MM/RR'));
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('28','2','2','1','4',to_date('09/10/19','DD/MM/RR'));
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('32','7','1','2','4',to_date('09/10/19','DD/MM/RR'));
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('29','3','1','2','5',to_date('09/10/19','DD/MM/RR'));
+Insert into RM82767.BH_AVALIACAO (ID_AVALIACAO,ID_USUARIO,CD_RESP_A,CD_RESP_B,CD_ESTRELA,DT_AVALIACAO) values ('27','1','2','1','5',to_date('08/10/19','DD/MM/RR'));
+--------------------------------------------------------
+--  DDL for Index BH_AVALIACAO_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "RM82767"."BH_AVALIACAO_PK" ON "RM82767"."BH_AVALIACAO" ("ID_AVALIACAO") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+--------------------------------------------------------
+--  DDL for Trigger BH_AVALIACAO_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "RM82767"."BH_AVALIACAO_TRG" 
+BEFORE INSERT ON BH_AVALIACAO 
+FOR EACH ROW 
+BEGIN
+  <<COLUMN_SEQUENCES>>
+  BEGIN
+    IF INSERTING AND :NEW.ID_AVALIACAO IS NULL THEN
+      SELECT BH_AVALIACAO_SEQ.NEXTVAL INTO :NEW.ID_AVALIACAO FROM SYS.DUAL;
+    END IF;
+  END COLUMN_SEQUENCES;
+END;
+/
+ALTER TRIGGER "RM82767"."BH_AVALIACAO_TRG" ENABLE;
+--------------------------------------------------------
+--  Constraints for Table BH_AVALIACAO
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_AVALIACAO" ADD CONSTRAINT "BH_AVALIACAO_PK" PRIMARY KEY ("ID_AVALIACAO")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS"  ENABLE;
+  ALTER TABLE "RM82767"."BH_AVALIACAO" MODIFY ("ID_AVALIACAO" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_AVALIACAO" MODIFY ("ID_USUARIO" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table BH_AVALIACAO
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_AVALIACAO" ADD CONSTRAINT "BH_AVALIACAO_BH_LIST_RESP_FK" FOREIGN KEY ("CD_RESP_A")
+	  REFERENCES "RM82767"."BH_LIST_RESP" ("ID_RESP_A") ENABLE;
+  ALTER TABLE "RM82767"."BH_AVALIACAO" ADD CONSTRAINT "BH_AVALIACAO_BH_USUARIO_FK" FOREIGN KEY ("ID_USUARIO")
+	  REFERENCES "RM82767"."BH_USUARIO" ("ID_USUARIO") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+--  Arquivo criado - Quarta-feira-Outubro-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BH_RESP_PERSQUISA
+--------------------------------------------------------
+
+  CREATE TABLE "RM82767"."BH_RESP_PERSQUISA" 
+   (	"COD_OPC" NUMBER(*,0), 
+	"OPC" VARCHAR2(4000 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+REM INSERTING into RM82767.BH_RESP_PERSQUISA
+SET DEFINE OFF;
+Insert into RM82767.BH_RESP_PERSQUISA (COD_OPC,OPC) values ('1','Sim- corretamente');
+Insert into RM82767.BH_RESP_PERSQUISA (COD_OPC,OPC) values ('2','Nao - não corretamente');
+Insert into RM82767.BH_RESP_PERSQUISA (COD_OPC,OPC) values ('3','Parcialmente');
+--------------------------------------------------------
+--  DDL for Index BH_RESP_PERSQUISA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "RM82767"."BH_RESP_PERSQUISA_PK" ON "RM82767"."BH_RESP_PERSQUISA" ("COD_OPC") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+--------------------------------------------------------
+--  DDL for Trigger BH_RESP_PERSQUISA_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "RM82767"."BH_RESP_PERSQUISA_TRG" 
+BEFORE INSERT ON BH_RESP_PERSQUISA 
+FOR EACH ROW 
+BEGIN
+  <<COLUMN_SEQUENCES>>
+  BEGIN
+    NULL;
+  END COLUMN_SEQUENCES;
+END;
+/
+ALTER TRIGGER "RM82767"."BH_RESP_PERSQUISA_TRG" ENABLE;
+--------------------------------------------------------
+--  Constraints for Table BH_RESP_PERSQUISA
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_RESP_PERSQUISA" ADD CONSTRAINT "BH_RESP_PERSQUISA_PK" PRIMARY KEY ("COD_OPC")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS"  ENABLE;
+  ALTER TABLE "RM82767"."BH_RESP_PERSQUISA" MODIFY ("COD_OPC" NOT NULL ENABLE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+--  Arquivo criado - Quarta-feira-Outubro-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BH_PESQUISA
+--------------------------------------------------------
+
+  CREATE TABLE "RM82767"."BH_PESQUISA" 
+   (	"ID" NUMBER(*,0), 
+	"COD_RESPA" NUMBER(*,0), 
+	"COD_RESPB" NUMBER, 
+	"COD_AVALIACAO" NUMBER, 
+	"RESPA" VARCHAR2(4000 BYTE), 
+	"RESPB" VARCHAR2(4000 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+REM INSERTING into RM82767.BH_PESQUISA
+SET DEFINE OFF;
+Insert into RM82767.BH_PESQUISA (ID,COD_RESPA,COD_RESPB,COD_AVALIACAO,RESPA,RESPB) values ('1','2','1','4','oque é matriz,defina computador','otimo trabalho!');
+Insert into RM82767.BH_PESQUISA (ID,COD_RESPA,COD_RESPB,COD_AVALIACAO,RESPA,RESPB) values ('2','1','2','5','oque é watson,defina AI',null);
+--------------------------------------------------------
+--  DDL for Index BH_PESQUISA_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "RM82767"."BH_PESQUISA_PK" ON "RM82767"."BH_PESQUISA" ("ID") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+--------------------------------------------------------
+--  DDL for Trigger BH_PESQUISA_TRG
+--------------------------------------------------------
+
+  CREATE OR REPLACE TRIGGER "RM82767"."BH_PESQUISA_TRG" 
+BEFORE INSERT ON BH_PESQUISA 
+FOR EACH ROW 
+BEGIN
+  <<COLUMN_SEQUENCES>>
+  BEGIN
+    IF INSERTING AND :NEW.ID IS NULL THEN
+      SELECT BH_PESQUISA_SEQ.NEXTVAL INTO :NEW.ID FROM SYS.DUAL;
+    END IF;
+  END COLUMN_SEQUENCES;
+END;
+/
+ALTER TRIGGER "RM82767"."BH_PESQUISA_TRG" ENABLE;
+--------------------------------------------------------
+--  Constraints for Table BH_PESQUISA
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_PESQUISA" ADD CONSTRAINT "BH_PESQUISA_PK" PRIMARY KEY ("ID")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS"  ENABLE;
+  ALTER TABLE "RM82767"."BH_PESQUISA" MODIFY ("ID" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_PESQUISA" MODIFY ("COD_RESPA" NOT NULL ENABLE);
+--------------------------------------------------------
+--  Ref Constraints for Table BH_PESQUISA
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_PESQUISA" ADD CONSTRAINT "BH_PESQUISA_FK1" FOREIGN KEY ("COD_RESPA")
+	  REFERENCES "RM82767"."BH_RESP_PERSQUISA" ("COD_OPC") ENABLE;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------------------
+--  Arquivo criado - Quarta-feira-Outubro-23-2019   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table BH_LIST_RESP
+--------------------------------------------------------
+
+  CREATE TABLE "RM82767"."BH_LIST_RESP" 
+   (	"ID_RESP_A" NUMBER, 
+	"NM_REPOSTA" VARCHAR2(255 BYTE)
+   ) SEGMENT CREATION IMMEDIATE 
+  PCTFREE 10 PCTUSED 40 INITRANS 1 MAXTRANS 255 
+ NOCOMPRESS LOGGING
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+
+   COMMENT ON COLUMN "RM82767"."BH_LIST_RESP"."ID_RESP_A" IS 'Essa coluna deverá armazenar o código identificador de cada opção da primeira pergunta da avaliação';
+   COMMENT ON COLUMN "RM82767"."BH_LIST_RESP"."NM_REPOSTA" IS 'Essa coluna deverá armazenar a resposta da primeira pergunta da avaliação';
+REM INSERTING into RM82767.BH_LIST_RESP
+SET DEFINE OFF;
+Insert into RM82767.BH_LIST_RESP (ID_RESP_A,NM_REPOSTA) values ('1','Sim - foram respondidas corretamente');
+Insert into RM82767.BH_LIST_RESP (ID_RESP_A,NM_REPOSTA) values ('2','Nao - nao foram respondidas corretamente');
+Insert into RM82767.BH_LIST_RESP (ID_RESP_A,NM_REPOSTA) values ('3','Foram respondidas parcialmente');
+--------------------------------------------------------
+--  DDL for Index BH_LIST_RESP_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "RM82767"."BH_LIST_RESP_PK" ON "RM82767"."BH_LIST_RESP" ("ID_RESP_A") 
+  PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS" ;
+--------------------------------------------------------
+--  Constraints for Table BH_LIST_RESP
+--------------------------------------------------------
+
+  ALTER TABLE "RM82767"."BH_LIST_RESP" ADD CONSTRAINT "BH_LIST_RESP_PK" PRIMARY KEY ("ID_RESP_A")
+  USING INDEX PCTFREE 10 INITRANS 2 MAXTRANS 255 COMPUTE STATISTICS 
+  STORAGE(INITIAL 65536 NEXT 1048576 MINEXTENTS 1 MAXEXTENTS 2147483645
+  PCTINCREASE 0 FREELISTS 1 FREELIST GROUPS 1
+  BUFFER_POOL DEFAULT FLASH_CACHE DEFAULT CELL_FLASH_CACHE DEFAULT)
+  TABLESPACE "TBSPC_ALUNOS"  ENABLE;
+  ALTER TABLE "RM82767"."BH_LIST_RESP" MODIFY ("ID_RESP_A" NOT NULL ENABLE);
+  ALTER TABLE "RM82767"."BH_LIST_RESP" MODIFY ("NM_REPOSTA" NOT NULL ENABLE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------DML--------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Componentes do Grupo
+-- BÁRBARA DOS SANTOS RODRIGUES - RM 79876
+-- EMERSON VITORIO DE OLIVEIRA - RM 83879
+-- FELIPE ABILA GONÇALVES - RM 82237
+-- GABRIEL DIOGO - RM 82767
+-- HENRIQUE DE SOUZA MAGANA - RM 83384
+
+-- Beehive - Criação Massa de Dados
+
+-- Tabela: bh_usuario - Massa de Dados - 200 linhas
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (1, 'Great white pelican', 'abarczynski0@mapquest.com', '6JK329r6g', TO_DATE('12/25/2018', 'mm/dd/yyyy'), 'Male', '188-647-4052');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (2, 'Sportive lemur', 'arobatham1@cnn.com', 'rYgBY1NJum', TO_DATE('03/22/2019', 'mm/dd/yyyy'), 'Male', '228-847-2035');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (3, 'Deer, black-tailed', 'csandbrook2@vkontakte.ru', 'yEzHFhhUuD', TO_DATE('12/18/2018', 'mm/dd/yyyy'), 'Male', '364-470-7252');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (4, 'Yellow-throated sandgrouse', 'hthyng3@weebly.com', 'k1nfUiAYppu', TO_DATE('03/28/2019', 'mm/dd/yyyy'), 'Male', '288-253-9609');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (5, 'Ferruginous hawk', 'jlegrice4@sourceforge.net', 'eM4aAR', TO_DATE('11/07/2018', 'mm/dd/yyyy'), 'Female', '186-553-9221');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (6, 'Greater adjutant stork', 'nclara5@msu.edu', 'S6xwnLGFa15', TO_DATE('05/31/2019', 'mm/dd/yyyy'), 'Male', '941-537-4571');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (7, 'Nine-banded armadillo', 'sflux6@businessinsider.com', 'htjePeCzv', TO_DATE('04/05/2019', 'mm/dd/yyyy'), 'Male', '310-487-4583');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (8, 'Oryx, beisa', 'ctroth7@friendfeed.com', '88gYSOnvaNn2', TO_DATE('04/14/2019', 'mm/dd/yyyy'), 'Male', '113-322-7621');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (9, 'Langur, common', 'fjouaneton8@amazon.co.jp', 'HH9kSP6XdKHv', TO_DATE('07/29/2019', 'mm/dd/yyyy'), 'Female', '115-301-8708');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (10, 'Great horned owl', 'amitie9@goo.ne.jp', 'HmOqG7', TO_DATE('11/05/2018', 'mm/dd/yyyy'), 'Male', '202-140-1649');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (11, 'Egyptian viper', 'aambridgea@tinypic.com', 'eeLgo6', TO_DATE('08/19/2019', 'mm/dd/yyyy'), 'Male', '681-551-1629');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (12, 'Lemur, brown', 'awhaleyb@alibaba.com', 'pClrnLF', TO_DATE('03/22/2019', 'mm/dd/yyyy'), 'Male', '560-503-9828');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (13, 'Penguin, galapagos', 'lchidlerc@feedburner.com', 'PmQYx9', TO_DATE('12/10/2018', 'mm/dd/yyyy'), 'Female', '741-115-5444');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (14, 'White-winged tern', 'cthunnercliffed@buzzfeed.com', 'KFhWv8r', TO_DATE('11/24/2018', 'mm/dd/yyyy'), 'Male', '644-693-4210');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (15, 'Heron, yellow-crowned night', 'wolneye@mashable.com', 'KgDL79', TO_DATE('03/01/2019', 'mm/dd/yyyy'), 'Male', '912-867-9963');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (16, 'Langur, gray', 'zogradyf@scientificamerican.com', '8II7MPSoJZ', TO_DATE('11/12/2018', 'mm/dd/yyyy'), 'Female', '547-786-3119');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (17, 'Porcupine, indian', 'cdigmang@oakley.com', 'IVnhPiURpB', TO_DATE('08/30/2019', 'mm/dd/yyyy'), 'Male', '160-734-1128');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (18, 'Genet, small-spotted', 'hedmonstoneh@blog.com', '1qb6DU8UHjZ', TO_DATE('08/05/2019', 'mm/dd/yyyy'), 'Female', '531-797-8208');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (19, 'Large-eared bushbaby', 'mkewleyi@scribd.com', 'UdvUuSl5b', TO_DATE('04/10/2019', 'mm/dd/yyyy'), 'Female', '884-597-9989');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (20, 'Kangaroo, western grey', 'lsandifordj@timesonline.co.uk', 'ys8hUXHXg9', TO_DATE('12/15/2018', 'mm/dd/yyyy'), 'Male', '406-460-0320');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (21, 'Baboon, savanna', 'tmaplethorpek@istockphoto.com', 'WUNEqXGdS', TO_DATE('12/22/2018', 'mm/dd/yyyy'), 'Male', '631-352-5618');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (22, 'Pine squirrel', 'hdanatl@huffingtonpost.com', 'iH5QBBY0', TO_DATE('06/06/2019', 'mm/dd/yyyy'), 'Female', '895-944-0966');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (23, 'Crane, stanley', 'rdufourm@yahoo.co.jp', 'zFxeMx', TO_DATE('05/19/2019', 'mm/dd/yyyy'), 'Male', '998-466-5107');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (24, 'White-eye, cape', 'darnasonn@google.ca', 'MP94ootZ', TO_DATE('11/07/2018', 'mm/dd/yyyy'), 'Female', '299-471-3206');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (25, 'Yellow-billed stork', 'cmayhoo@topsy.com', 'q6G77u', TO_DATE('12/06/2018', 'mm/dd/yyyy'), 'Male', '205-209-7061');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (26, 'Cow, scottish highland', 'kstablerp@gravatar.com', 'F23Wv54', TO_DATE('08/15/2019', 'mm/dd/yyyy'), 'Male', '500-295-6050');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (27, 'Euro wallaby', 'lwaltersq@alexa.com', 'GIIQyBR9V', TO_DATE('05/18/2019', 'mm/dd/yyyy'), 'Female', '738-390-2055');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (28, 'Suricate', 'spogosianr@soup.io', 'ZaxebFcn', TO_DATE('07/18/2019', 'mm/dd/yyyy'), 'Female', '201-852-2047');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (29, 'Finch, common melba', 'ckids@hud.gov', '4X1CkEMoX9I', TO_DATE('05/27/2019', 'mm/dd/yyyy'), 'Female', '864-282-1945');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (30, 'Barbet, levaillant''s', 'vcastiellot@bigcartel.com', 'C5Cyfw', TO_DATE('02/09/2019', 'mm/dd/yyyy'), 'Male', '390-113-7924');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (31, 'Squirrel, golden-mantled ground', 'sfrickeu@paypal.com', 'l15v6W', TO_DATE('11/09/2018', 'mm/dd/yyyy'), 'Female', '171-947-0959');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (32, 'African red-eyed bulbul', 'msimonyv@dagondesign.com', 'UkGuV0', TO_DATE('07/16/2019', 'mm/dd/yyyy'), 'Female', '185-645-6089');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (33, 'Tiger', 'mclowneyw@icq.com', 'aB7Keu', TO_DATE('08/05/2019', 'mm/dd/yyyy'), 'Female', '942-100-8556');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (34, 'Black and white colobus', 'iheadleyx@unesco.org', 'yIcfWDuLg', TO_DATE('02/11/2019', 'mm/dd/yyyy'), 'Male', '174-624-5699');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (35, 'Spoonbill, european', 'mdoorbary@creativecommons.org', '9rrC5NsMBE', TO_DATE('08/12/2019', 'mm/dd/yyyy'), 'Female', '355-251-1765');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (36, 'European badger', 'hgounyz@miibeian.gov.cn', '8VQMVwNfBQoL', TO_DATE('03/09/2019', 'mm/dd/yyyy'), 'Male', '267-500-1416');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (37, 'Vulture, lappet-faced', 'mgadesby10@technorati.com', 'pzsEl6kkabTU', TO_DATE('11/23/2018', 'mm/dd/yyyy'), 'Female', '811-755-2756');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (38, 'Topi', 'mtapping11@netlog.com', 'GQI7sTZaUgm', TO_DATE('07/24/2019', 'mm/dd/yyyy'), 'Female', '572-374-1889');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (39, 'Grant''s gazelle', 'sevemy12@ted.com', 'Oa9vgj7bA', TO_DATE('07/29/2019', 'mm/dd/yyyy'), 'Male', '743-552-1965');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (40, 'Godwit, hudsonian', 'bbettaney13@ezinearticles.com', '3ow649YAPUKn', TO_DATE('07/18/2019', 'mm/dd/yyyy'), 'Female', '728-705-4034');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (41, 'Yellow-necked spurfowl', 'aloveless14@yellowbook.com', 'ODHw7FC5AYi8', TO_DATE('10/13/2019', 'mm/dd/yyyy'), 'Male', '825-568-8670');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (42, 'Bushpig', 'gvaugham15@hugedomains.com', 'oLfpzgId6J', TO_DATE('03/17/2019', 'mm/dd/yyyy'), 'Female', '615-723-0608');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (43, 'Oryx, beisa', 'kfrankum16@prnewswire.com', 'xCwLRw1xg', TO_DATE('12/18/2018', 'mm/dd/yyyy'), 'Female', '234-114-7990');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (44, 'White rhinoceros', 'asneesby17@twitpic.com', 'yQkflUc', TO_DATE('08/10/2019', 'mm/dd/yyyy'), 'Male', '171-595-0368');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (45, 'Tern, arctic', 'amcgrowther18@google.cn', 'YQHHjiWNDM', TO_DATE('02/24/2019', 'mm/dd/yyyy'), 'Female', '735-602-5012');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (46, 'Bustard, stanley', 'dcorringham19@unc.edu', 'oP4fa4Hjt6', TO_DATE('02/01/2019', 'mm/dd/yyyy'), 'Male', '215-993-6996');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (47, 'Zorro, azara''s', 'lstubbe1a@e-recht24.de', 'sqC404K', TO_DATE('09/01/2019', 'mm/dd/yyyy'), 'Male', '457-412-1356');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (48, 'Weeper capuchin', 'wminnette1b@npr.org', 'LVbJ8T', TO_DATE('12/09/2018', 'mm/dd/yyyy'), 'Male', '844-118-9696');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (49, 'Japanese macaque', 'vhawkin1c@nhs.uk', 'fW6kiMqIn2', TO_DATE('12/06/2018', 'mm/dd/yyyy'), 'Female', '542-520-6350');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (50, 'Phalarope, red-necked', 'lemmins1d@sun.com', 'hLqma8T', TO_DATE('06/18/2019', 'mm/dd/yyyy'), 'Male', '311-180-5615');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (51, 'Large cormorant', 'cbeare1e@dion.ne.jp', 'nakAIy', TO_DATE('09/04/2019', 'mm/dd/yyyy'), 'Male', '807-387-5945');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (52, 'Pallas''s fish eagle', 'mbavridge1f@usnews.com', 'Fv6yuAB0Ya', TO_DATE('12/13/2018', 'mm/dd/yyyy'), 'Female', '332-684-8366');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (53, 'Tawny eagle', 'qdinapoli1g@ucsd.edu', '5ntWdCLa', TO_DATE('09/10/2019', 'mm/dd/yyyy'), 'Female', '754-313-9337');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (54, 'Sloth bear', 'jstredder1h@bizjournals.com', 'ygEDK5LRlWUh', TO_DATE('08/24/2019', 'mm/dd/yyyy'), 'Female', '311-369-3038');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (55, 'Lizard, collared', 'nperago1i@sohu.com', 'yfpzAZpO6', TO_DATE('07/31/2019', 'mm/dd/yyyy'), 'Female', '504-996-0124');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (56, 'Black spider monkey', 'ggerok1j@boston.com', '00Eibl', TO_DATE('07/15/2019', 'mm/dd/yyyy'), 'Male', '837-272-4595');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (57, 'Macaw, green-winged', 'mobrien1k@google.ru', 'ZnHXBN', TO_DATE('10/17/2019', 'mm/dd/yyyy'), 'Male', '148-719-4887');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (58, 'Seal, northern elephant', 'mkonzel1l@mail.ru', 'K38DjM5', TO_DATE('01/13/2019', 'mm/dd/yyyy'), 'Male', '148-427-2083');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (59, 'Viper, egyptian', 'ablanque1m@un.org', 'qpkyy7', TO_DATE('12/14/2018', 'mm/dd/yyyy'), 'Female', '819-190-9150');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (60, 'Adouri (unidentified)', 'dlambis1n@php.net', 'V7oMAA', TO_DATE('09/10/2019', 'mm/dd/yyyy'), 'Male', '943-121-2607');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (61, 'Blue peacock', 'chovie1o@4shared.com', 'jEoSsga9x', TO_DATE('08/25/2019', 'mm/dd/yyyy'), 'Male', '632-241-6890');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (62, 'White-fronted bee-eater', 'kebunoluwa1p@ihg.com', 'tc0OBlndvgde', TO_DATE('03/01/2019', 'mm/dd/yyyy'), 'Male', '989-152-9700');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (63, 'Sparrow, rufous-collared', 'mwestnedge1q@statcounter.com', 'B7I0xReXXBhx', TO_DATE('11/10/2018', 'mm/dd/yyyy'), 'Male', '812-596-9062');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (64, 'Bohor reedbuck', 'njesse1r@squarespace.com', 'noWhIs4TsE', TO_DATE('05/13/2019', 'mm/dd/yyyy'), 'Male', '980-249-9892');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (65, 'Snowy owl', 'cstonman1s@auda.org.au', 'CFj3Jqj4vogW', TO_DATE('04/08/2019', 'mm/dd/yyyy'), 'Male', '338-120-6091');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (66, 'Rufous-collared sparrow', 'asheards1t@about.com', 'nEMAek', TO_DATE('08/06/2019', 'mm/dd/yyyy'), 'Male', '698-683-7571');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (67, 'Fork-tailed drongo', 'abowfin1u@wp.com', 'pIoKHBd', TO_DATE('03/19/2019', 'mm/dd/yyyy'), 'Male', '651-958-9828');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (68, 'Prairie falcon', 'blanghorn1v@imdb.com', 'qqFR5E', TO_DATE('07/03/2019', 'mm/dd/yyyy'), 'Female', '117-536-1621');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (69, 'Heron, green', 'eawty1w@google.es', 'dDSmssnVhOB', TO_DATE('07/24/2019', 'mm/dd/yyyy'), 'Male', '160-420-2469');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (70, 'Huron', 'stimson1x@networkadvertising.org', 'XGuwFyXcLo', TO_DATE('08/27/2019', 'mm/dd/yyyy'), 'Female', '415-677-7827');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (71, 'Savanna baboon', 'dbranche1y@mysql.com', 'BpkNAUrqFy', TO_DATE('06/17/2019', 'mm/dd/yyyy'), 'Female', '750-265-1720');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (72, 'Ant (unidentified)', 'kwabb1z@state.tx.us', 'DIjrxH', TO_DATE('10/23/2018', 'mm/dd/yyyy'), 'Male', '992-528-4227');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (73, 'Yellow-crowned night heron', 'afrancescozzi20@elpais.com', 'WunA5TIZ1', TO_DATE('05/31/2019', 'mm/dd/yyyy'), 'Female', '304-393-5307');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (74, 'Long-tailed jaeger', 'rogilvy21@economist.com', 'hbRlA9qEMY5z', TO_DATE('04/20/2019', 'mm/dd/yyyy'), 'Male', '109-614-8139');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (75, 'Sparrow, rufous-collared', 'askein22@ted.com', 'cHhtsC', TO_DATE('10/27/2018', 'mm/dd/yyyy'), 'Male', '764-165-7719');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (76, 'Nilgai', 'veveling23@feedburner.com', 'YQf2YBV5Ns', TO_DATE('11/01/2018', 'mm/dd/yyyy'), 'Female', '726-715-6232');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (77, 'Meerkat, red', 'balvarado24@unesco.org', 'gnnKQOYOq', TO_DATE('08/17/2019', 'mm/dd/yyyy'), 'Female', '989-785-3304');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (78, 'Legaan, ground', 'ssprull25@sfgate.com', 'LDwrBKlBYT', TO_DATE('09/06/2019', 'mm/dd/yyyy'), 'Male', '137-179-4404');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (79, 'Glossy starling (unidentified)', 'muvedale26@yandex.ru', 'eyG4mAhAGD', TO_DATE('05/02/2019', 'mm/dd/yyyy'), 'Male', '991-416-2959');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (80, 'Dingo', 'wtayler27@ihg.com', 'Z9Ba5Vi', TO_DATE('07/25/2019', 'mm/dd/yyyy'), 'Female', '847-992-0276');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (81, 'Black-tailed tree creeper', 'rbordessa28@answers.com', 'vE48uMYZYmj', TO_DATE('05/07/2019', 'mm/dd/yyyy'), 'Female', '130-102-3515');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (82, 'Red-breasted nuthatch', 'sjinkins29@newsvine.com', 'CZ2Ht6', TO_DATE('01/03/2019', 'mm/dd/yyyy'), 'Male', '535-810-5549');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (83, 'Nutcracker, clark''s', 'gmcilwrick2a@tripadvisor.com', 'VUyM2TH56bZQ', TO_DATE('03/25/2019', 'mm/dd/yyyy'), 'Male', '614-990-4861');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (84, 'Bear, polar', 'agatherell2b@spotify.com', 'NGTLN0hl', TO_DATE('10/09/2019', 'mm/dd/yyyy'), 'Female', '821-708-3213');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (85, 'Black curlew', 'mgun2c@dell.com', 'O031uH7T', TO_DATE('10/19/2019', 'mm/dd/yyyy'), 'Male', '226-618-3724');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (86, 'Capybara', 'akingman2d@livejournal.com', 'CAmjqZqB6pif', TO_DATE('02/05/2019', 'mm/dd/yyyy'), 'Female', '760-309-2853');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (87, 'Colobus, magistrate black', 'lhitschke2e@buzzfeed.com', 'r5ZGH3Ss8', TO_DATE('03/29/2019', 'mm/dd/yyyy'), 'Female', '996-601-0014');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (88, 'Slender-billed cockatoo', 'hpiolli2f@elegantthemes.com', 'GJMy8PgAWoP7', TO_DATE('08/02/2019', 'mm/dd/yyyy'), 'Male', '228-679-8751');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (89, 'Eastern cottontail rabbit', 'ablythe2g@pbs.org', 'wsTIvxG1sX', TO_DATE('06/06/2019', 'mm/dd/yyyy'), 'Male', '613-522-8104');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (90, 'Wolf, common', 'rvanshin2h@ted.com', 'klNclmRi', TO_DATE('11/03/2018', 'mm/dd/yyyy'), 'Female', '512-279-5107');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (91, 'Lizard, giant girdled', 'tsheal2i@woothemes.com', 'GvNXwR', TO_DATE('07/16/2019', 'mm/dd/yyyy'), 'Female', '466-345-0002');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (92, 'Cuis', 'lmixhel2j@fda.gov', 'LLpLU1', TO_DATE('01/01/2019', 'mm/dd/yyyy'), 'Female', '721-932-5874');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (93, 'Woolly-necked stork', 'rocassidy2k@merriam-webster.com', 'ZzR2LP85', TO_DATE('09/21/2019', 'mm/dd/yyyy'), 'Male', '671-326-8088');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (94, 'Little brown dove', 'fwelldrake2l@fastcompany.com', 'PAoBeIVJYQ', TO_DATE('08/05/2019', 'mm/dd/yyyy'), 'Female', '103-217-4634');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (95, 'Ring-tailed coatimundi', 'atuhy2m@123-reg.co.uk', 'EukiaRy', TO_DATE('08/26/2019', 'mm/dd/yyyy'), 'Male', '648-452-4381');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (96, 'Bulbul, black-fronted', 'bmurt2n@theguardian.com', 'R1yHsGKiBsn', TO_DATE('05/10/2019', 'mm/dd/yyyy'), 'Male', '891-705-6072');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (97, 'Rock dove', 'wmalser2o@cnbc.com', 'umLOIms4E0', TO_DATE('12/23/2018', 'mm/dd/yyyy'), 'Male', '337-529-7024');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (98, 'Goose, cereopsis', 'lkleinber2p@nsw.gov.au', 'ZQbjRlQMlHdh', TO_DATE('10/19/2019', 'mm/dd/yyyy'), 'Female', '473-764-1612');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (99, 'Desert spiny lizard', 'lfabri2q@admin.ch', 'OoXruQP', TO_DATE('01/14/2019', 'mm/dd/yyyy'), 'Female', '518-367-7523');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (100, 'Dolphin, bottle-nose', 'doakshott2r@youtu.be', 'yxT0QP', TO_DATE('07/04/2019', 'mm/dd/yyyy'), 'Female', '857-791-7542');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (101, 'Asian water dragon', 'pbaggaley2s@blogtalkradio.com', 'eqaAbdoNRC1g', TO_DATE('07/28/2019', 'mm/dd/yyyy'), 'Male', '189-891-2363');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (102, 'Green-winged trumpeter', 'cpharo2t@hubpages.com', 'nrbRiXHr9N', TO_DATE('01/03/2019', 'mm/dd/yyyy'), 'Female', '355-238-1164');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (103, 'Barbet, levaillant''s', 'alackinton2u@imgur.com', '4ALMeTCm', TO_DATE('10/02/2019', 'mm/dd/yyyy'), 'Male', '845-144-0580');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (104, 'Peacock, blue', 'riacoboni2v@cbsnews.com', '73MNsHq1NEOu', TO_DATE('07/31/2019', 'mm/dd/yyyy'), 'Female', '900-507-2886');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (105, 'Kangaroo, eastern grey', 'bleyre2w@networksolutions.com', 'quiknt', TO_DATE('08/04/2019', 'mm/dd/yyyy'), 'Male', '465-967-5567');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (106, 'Waterbuck, common', 'dhickinbottom2x@businessweek.com', 'QTwzLuI', TO_DATE('07/20/2019', 'mm/dd/yyyy'), 'Female', '997-508-8413');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (107, 'Stork, marabou', 'dcarrabott2y@thetimes.co.uk', '4B3AImFbj16', TO_DATE('08/20/2019', 'mm/dd/yyyy'), 'Female', '374-119-5524');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (108, 'Giant anteater', 'mbrisard2z@goo.ne.jp', 'TlNSry0QLH', TO_DATE('11/17/2018', 'mm/dd/yyyy'), 'Male', '328-300-9049');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (109, 'Lizard, frilled', 'rroyston30@ucsd.edu', 'Ov6Hspm', TO_DATE('11/16/2018', 'mm/dd/yyyy'), 'Male', '957-195-8628');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (110, 'Pronghorn', 'jgrayshon31@ning.com', '8POO25ZLF1A', TO_DATE('05/05/2019', 'mm/dd/yyyy'), 'Male', '993-681-7820');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (111, 'Red brocket', 'srunchman32@wikimedia.org', 'ohy7aDtpxFX', TO_DATE('01/27/2019', 'mm/dd/yyyy'), 'Male', '431-986-3895');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (112, 'Dove, ring', 'biddon33@guardian.co.uk', 'sWITLqM', TO_DATE('05/11/2019', 'mm/dd/yyyy'), 'Female', '212-823-3283');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (113, 'Mexican boa', 'dwaskett34@skyrock.com', 'ZXPkvAFFZ', TO_DATE('01/08/2019', 'mm/dd/yyyy'), 'Male', '981-715-6147');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (114, 'Australian brush turkey', 'pegdell35@stumbleupon.com', 'pNZiQDS7Puhs', TO_DATE('11/26/2018', 'mm/dd/yyyy'), 'Female', '213-366-3727');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (115, 'Dassie', 'jmorling36@weebly.com', 'vuZAw7dT', TO_DATE('06/04/2019', 'mm/dd/yyyy'), 'Female', '613-323-7927');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (116, 'Caracara (unidentified)', 'tsparrowhawk37@example.com', 'HRtGOW', TO_DATE('07/21/2019', 'mm/dd/yyyy'), 'Female', '819-721-9358');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (117, 'Fowl, helmeted guinea', 'kmcgovern38@trellian.com', 'lJ64qu', TO_DATE('10/07/2019', 'mm/dd/yyyy'), 'Female', '823-945-8454');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (118, 'Eland, common', 'ckwietak39@digg.com', 'CLMNpkiEf', TO_DATE('06/23/2019', 'mm/dd/yyyy'), 'Male', '313-931-6143');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (119, 'Waved albatross', 'gwyon3a@myspace.com', 'Rhe4lV', TO_DATE('06/26/2019', 'mm/dd/yyyy'), 'Male', '609-663-6201');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (120, 'Ocelot', 'mskeldon3b@webeden.co.uk', 'mE5UyTkKDff', TO_DATE('04/18/2019', 'mm/dd/yyyy'), 'Female', '823-543-5742');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (121, 'Whale, southern right', 'dcayley3c@youtu.be', 'V0fn08mxsst', TO_DATE('01/13/2019', 'mm/dd/yyyy'), 'Male', '865-555-0458');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (122, 'Starling, greater blue-eared', 'hsoro3d@instagram.com', 'RwlGqswN', TO_DATE('09/28/2019', 'mm/dd/yyyy'), 'Male', '830-630-1911');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (123, 'American buffalo', 'kkeal3e@ihg.com', 'miQpjyc3kN', TO_DATE('01/19/2019', 'mm/dd/yyyy'), 'Male', '309-960-5287');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (124, 'Kori bustard', 'hwigzell3f@samsung.com', 'DdK2i10', TO_DATE('02/27/2019', 'mm/dd/yyyy'), 'Male', '608-291-0388');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (125, 'Laughing dove', 'laddionizio3g@cisco.com', '31molgqkbf', TO_DATE('12/22/2018', 'mm/dd/yyyy'), 'Male', '929-688-5133');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (126, 'Sheep, stone', 'gmcnirlan3h@marriott.com', 'wKv97E77SK70', TO_DATE('03/14/2019', 'mm/dd/yyyy'), 'Male', '185-382-6385');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (127, 'Buttermilk snake', 'jstede3i@tamu.edu', '11Q6W2Lwn4', TO_DATE('08/27/2019', 'mm/dd/yyyy'), 'Female', '381-846-4150');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (128, 'Greylag goose', 'famos3j@hp.com', 'xMSshuF', TO_DATE('05/21/2019', 'mm/dd/yyyy'), 'Female', '595-297-9817');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (129, 'Snow goose', 'mjorat3k@ycombinator.com', 'zNm49quS', TO_DATE('08/30/2019', 'mm/dd/yyyy'), 'Female', '825-826-5006');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (130, 'Falcon, prairie', 'iarlt3l@weibo.com', 'QawzDflZ0B', TO_DATE('12/24/2018', 'mm/dd/yyyy'), 'Female', '218-421-1660');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (131, 'Boa, emerald green tree', 'mkitchingman3m@ebay.com', 'z8eCZMZmX', TO_DATE('01/25/2019', 'mm/dd/yyyy'), 'Female', '911-993-9940');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (132, 'Squirrel, antelope ground', 'ahilhouse3n@ibm.com', 'd6fp5m5syfaN', TO_DATE('03/13/2019', 'mm/dd/yyyy'), 'Female', '371-332-3515');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (133, 'Trumpeter, green-winged', 'upierton3o@samsung.com', 'nZj8hU9hM', TO_DATE('07/20/2019', 'mm/dd/yyyy'), 'Male', '867-378-4954');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (134, 'Hudsonian godwit', 'npennells3p@elpais.com', 'kpXqDngH', TO_DATE('07/08/2019', 'mm/dd/yyyy'), 'Female', '655-673-6536');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (135, 'Greylag goose', 'vphlipon3q@nytimes.com', 'EaqHBC', TO_DATE('02/15/2019', 'mm/dd/yyyy'), 'Female', '545-783-6591');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (136, 'Bat-eared fox', 'hcartmael3r@salon.com', 'zJoSaEjq16', TO_DATE('02/02/2019', 'mm/dd/yyyy'), 'Female', '339-627-6307');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (137, 'Malleefowl', 'dbrundell3s@sina.com.cn', 'TokpczH1e4', TO_DATE('05/03/2019', 'mm/dd/yyyy'), 'Male', '769-879-8290');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (138, 'Kangaroo, eastern grey', 'wselvey3t@loc.gov', 'wURz6Fqp', TO_DATE('09/06/2019', 'mm/dd/yyyy'), 'Male', '217-401-3377');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (139, 'Hoary marmot', 'graxworthy3u@ebay.co.uk', 'Belig6UtE', TO_DATE('04/07/2019', 'mm/dd/yyyy'), 'Male', '876-749-1780');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (140, 'Hippopotamus', 'drattrie3v@phoca.cz', '6JhQ1wHVD', TO_DATE('12/07/2018', 'mm/dd/yyyy'), 'Female', '352-836-4821');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (141, 'Phalarope, northern', 'pmorrallee3w@twitpic.com', 'D75hgr4k2', TO_DATE('09/04/2019', 'mm/dd/yyyy'), 'Male', '816-523-4712');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (142, 'European beaver', 'ntop3x@liveinternet.ru', 'TeZqv1YUm', TO_DATE('06/08/2019', 'mm/dd/yyyy'), 'Female', '733-898-9747');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (143, 'Darwin ground finch (unidentified)', 'rmattys3y@bravesites.com', 'UUjg8ZyR', TO_DATE('10/03/2019', 'mm/dd/yyyy'), 'Female', '848-219-0809');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (144, 'Lizard, blue-tongued', 'cwastie3z@1und1.de', 'AyY5kgvJ', TO_DATE('04/26/2019', 'mm/dd/yyyy'), 'Female', '257-597-6913');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (145, 'Squirrel, golden-mantled ground', 'lalderson40@nifty.com', 'xVGYcNax', TO_DATE('09/03/2019', 'mm/dd/yyyy'), 'Male', '306-979-3488');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (146, 'Rhesus monkey', 'cschafer41@loc.gov', 'VZiixpy', TO_DATE('07/11/2019', 'mm/dd/yyyy'), 'Male', '119-911-3044');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (147, 'Bee-eater, carmine', 'ekime42@amazonaws.com', 'suP8zyo', TO_DATE('08/22/2019', 'mm/dd/yyyy'), 'Female', '432-940-6184');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (148, 'Racer, blue', 'tbiasotti43@ibm.com', '99BGqYqDRpz', TO_DATE('03/02/2019', 'mm/dd/yyyy'), 'Female', '350-881-7642');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (149, 'Tortoise, burmese black mountain', 'nram44@alibaba.com', 'oW80iHR', TO_DATE('03/14/2019', 'mm/dd/yyyy'), 'Male', '434-952-7859');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (150, 'Ant (unidentified)', 'hoakley45@goo.gl', 'wMH9BfgD1W', TO_DATE('12/28/2018', 'mm/dd/yyyy'), 'Male', '986-813-5898');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (151, 'Pine siskin', 'tcarnduff46@yahoo.co.jp', '1GmOsxE', TO_DATE('07/08/2019', 'mm/dd/yyyy'), 'Male', '472-245-5062');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (152, 'Blue-tongued lizard', 'pthripp47@mit.edu', 'U2uYlhiUrX4T', TO_DATE('04/27/2019', 'mm/dd/yyyy'), 'Female', '638-661-9236');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (153, 'Yellow-necked spurfowl', 'tnoble48@elpais.com', 'CuwqjDTu', TO_DATE('12/25/2018', 'mm/dd/yyyy'), 'Female', '944-965-2741');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (154, 'Malleefowl', 'farni49@japanpost.jp', '3j0CDxvUU', TO_DATE('07/27/2019', 'mm/dd/yyyy'), 'Male', '921-100-4000');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (155, 'Lion, asian', 'mvogeller4a@usnews.com', 'Nzlcj567fGn', TO_DATE('07/28/2019', 'mm/dd/yyyy'), 'Female', '630-168-4219');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (156, 'Anaconda (unidentified)', 'rschoenrock4b@ca.gov', 'WwMCa646m', TO_DATE('10/04/2019', 'mm/dd/yyyy'), 'Male', '909-623-4254');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (157, 'Cockatoo, slender-billed', 'sbiermatowicz4c@storify.com', 'k60n2w7eo', TO_DATE('08/10/2019', 'mm/dd/yyyy'), 'Female', '512-377-2968');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (158, 'African fish eagle', 'hbrandino4d@icio.us', 'q7NjUl2EF', TO_DATE('01/12/2019', 'mm/dd/yyyy'), 'Male', '936-215-0729');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (159, 'Bison, american', 'tjarmain4e@miitbeian.gov.cn', 'f5VKejlc', TO_DATE('03/04/2019', 'mm/dd/yyyy'), 'Male', '872-272-3949');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (160, 'Steenbok', 'karber4f@sun.com', 'VcnNGeeW', TO_DATE('03/04/2019', 'mm/dd/yyyy'), 'Female', '263-640-8763');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (161, 'Eleven-banded armadillo (unidentified)', 'mnowaczyk4g@bloglovin.com', '3CoJxDcv', TO_DATE('02/07/2019', 'mm/dd/yyyy'), 'Male', '571-956-4318');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (162, 'Long-billed cockatoo', 'pmckellar4h@nature.com', 'zlvFSQAtk', TO_DATE('01/20/2019', 'mm/dd/yyyy'), 'Female', '574-219-7094');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (163, 'Levaillant''s barbet', 'eskitteral4i@vinaora.com', '7U8y7F9', TO_DATE('02/12/2019', 'mm/dd/yyyy'), 'Male', '529-613-2367');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (164, 'Monitor, water', 'wlintot4j@seattletimes.com', 'le7KxHwX69', TO_DATE('08/14/2019', 'mm/dd/yyyy'), 'Male', '553-393-3957');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (165, 'Western lowland gorilla', 'saddionizio4k@constantcontact.com', 'SELy40dEmml', TO_DATE('03/13/2019', 'mm/dd/yyyy'), 'Male', '727-292-4516');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (166, 'Fox, savanna', 'dpowner4l@phoca.cz', 'GfHM2CTN0I', TO_DATE('07/10/2019', 'mm/dd/yyyy'), 'Male', '913-270-1416');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (167, 'Tamandua, southern', 'ehedau4m@vkontakte.ru', 'Ga7aaNPcA', TO_DATE('03/28/2019', 'mm/dd/yyyy'), 'Female', '174-511-2905');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (168, 'Springbuck', 'nogrogane4n@phpbb.com', 'QIXeIR5g6RmL', TO_DATE('03/24/2019', 'mm/dd/yyyy'), 'Male', '414-773-4120');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (169, 'Waxbill, black-cheeked', 'pwombwell4o@tinyurl.com', 'fCMAEhCG2F', TO_DATE('03/30/2019', 'mm/dd/yyyy'), 'Male', '996-356-5707');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (170, 'Yellow-necked spurfowl', 'civamy4p@chicagotribune.com', 'CUD1qtvx4', TO_DATE('06/22/2019', 'mm/dd/yyyy'), 'Female', '343-410-4544');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (171, 'Red hartebeest', 'beteen4q@taobao.com', 'q9eJwIeUiYZM', TO_DATE('10/06/2019', 'mm/dd/yyyy'), 'Male', '150-735-8942');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (172, 'Jackal, indian', 'mlepruvost4r@nps.gov', 'vTy8QnJA5', TO_DATE('12/14/2018', 'mm/dd/yyyy'), 'Male', '538-805-7010');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (173, 'Peacock, indian', 'jcornell4s@nasa.gov', '54e7z8oUZiE', TO_DATE('10/20/2018', 'mm/dd/yyyy'), 'Male', '209-255-7447');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (174, 'Kookaburra, laughing', 'mmendenhall4t@imdb.com', 'vF9ccuC1Q', TO_DATE('12/17/2018', 'mm/dd/yyyy'), 'Female', '684-412-5203');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (175, 'Ibis, puna', 'ptetford4u@wunderground.com', '1F01yOb', TO_DATE('10/25/2018', 'mm/dd/yyyy'), 'Male', '329-254-1155');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (176, 'Kangaroo, red', 'tdeeks4v@blog.com', 'hFFdgdl', TO_DATE('04/27/2019', 'mm/dd/yyyy'), 'Female', '311-592-6631');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (177, 'Capuchin, brown', 'cheinz4w@hud.gov', 'Clyn7h3hDIhj', TO_DATE('02/20/2019', 'mm/dd/yyyy'), 'Male', '630-838-8159');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (178, 'Stork, black-necked', 'epavlov4x@webnode.com', 'DbK4fdmBoX', TO_DATE('06/12/2019', 'mm/dd/yyyy'), 'Female', '387-471-7678');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (179, 'Yellow-billed stork', 'olassey4y@bigcartel.com', 'IDPO1lfv', TO_DATE('02/13/2019', 'mm/dd/yyyy'), 'Male', '623-358-4574');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (180, 'Waved albatross', 'jjohnigan4z@disqus.com', 'sDotGI', TO_DATE('01/23/2019', 'mm/dd/yyyy'), 'Female', '405-533-5268');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (181, 'Shrike, common boubou', 'afrayne50@redcross.org', 'ovs5rsbAlW5', TO_DATE('05/23/2019', 'mm/dd/yyyy'), 'Male', '604-835-3378');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (182, 'Squirrel, african bush', 'bstirzaker51@imageshack.us', 'TnXIrdBYTj4', TO_DATE('09/04/2019', 'mm/dd/yyyy'), 'Female', '609-456-6079');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (183, 'Koala', 'wbrighouse52@mediafire.com', 'B61Waw43O', TO_DATE('06/19/2019', 'mm/dd/yyyy'), 'Female', '485-424-4754');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (184, 'Turtle, eastern box', 'aheinritz53@tinypic.com', 'R9qlds2XY', TO_DATE('06/11/2019', 'mm/dd/yyyy'), 'Female', '800-660-3164');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (185, 'African wild cat', 'hradbourn54@businessinsider.com', 'rO7NWufD', TO_DATE('07/13/2019', 'mm/dd/yyyy'), 'Male', '134-669-7339');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (186, 'Fox, savanna', 'ssephton55@prnewswire.com', 'uUHDS2UPgvMg', TO_DATE('04/07/2019', 'mm/dd/yyyy'), 'Female', '592-742-5192');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (187, 'Woodrat (unidentified)', 'cdecristofalo56@dyndns.org', 'jrTde6', TO_DATE('07/12/2019', 'mm/dd/yyyy'), 'Female', '734-540-1345');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (188, 'Seven-banded armadillo', 'rlacky57@adobe.com', '5IPillt0Z', TO_DATE('09/04/2019', 'mm/dd/yyyy'), 'Female', '152-872-5233');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (189, 'Green-winged macaw', 'fwigginton58@go.com', '3KKNDCleW7', TO_DATE('08/19/2019', 'mm/dd/yyyy'), 'Female', '357-233-9271');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (190, 'Lemming, arctic', 'gbibbie59@rakuten.co.jp', 'QCnulg2pRu7', TO_DATE('11/03/2018', 'mm/dd/yyyy'), 'Female', '944-681-9087');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (191, 'African porcupine', 'strawin5a@google.fr', 'Tlo4ahQMQS', TO_DATE('10/13/2019', 'mm/dd/yyyy'), 'Female', '563-570-8975');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (192, 'Neotropic cormorant', 'hsedgemore5b@fema.gov', 'Ptcfk65k', TO_DATE('06/19/2019', 'mm/dd/yyyy'), 'Male', '540-145-0160');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (193, 'Albatross, waved', 'kcheale5c@a8.net', 'qkrSf0gE1Gk', TO_DATE('09/20/2019', 'mm/dd/yyyy'), 'Male', '214-487-7368');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (194, 'Eagle, bateleur', 'rwallerbridge5d@over-blog.com', '9Z3w7VyA', TO_DATE('08/13/2019', 'mm/dd/yyyy'), 'Female', '642-387-4787');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (195, 'Red-breasted nuthatch', 'ejoust5e@nhs.uk', '3DV0zJFebv', TO_DATE('03/03/2019', 'mm/dd/yyyy'), 'Female', '884-731-4877');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (196, 'Duiker, gray', 'mkingman5f@unc.edu', 'gZm8Tyd8Mc', TO_DATE('10/21/2018', 'mm/dd/yyyy'), 'Female', '502-196-7628');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (197, 'Cougar', 'fbertson5g@so-net.ne.jp', 'jRR8nm', TO_DATE('10/22/2018', 'mm/dd/yyyy'), 'Male', '276-525-9329');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (198, 'Zorro, azara''s', 'bheinritz5h@columbia.edu', 'Td586b8reFp', TO_DATE('06/15/2019', 'mm/dd/yyyy'), 'Female', '669-501-4979');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (199, 'Roadrunner, greater', 'kcullnean5i@webnode.com', 'eiRgeAOgw9bR', TO_DATE('03/30/2019', 'mm/dd/yyyy'), 'Male', '381-466-0675');
+insert into bh_usuario (id_usuario, nm_usuario, nm_email_usuario, nm_senha_usuario, dt_nasc_usuario, nm_sexo_usuario, nr_cel_usuario) values (200, 'Madagascar hawk owl', 'jbinnell5j@xinhuanet.com', 'JiAYwl', TO_DATE('11/09/2018', 'mm/dd/yyyy'), 'Female', '176-809-6256');
+
+-- Tabela: bh_list_resp - Massa de Dados - 200 linhas
+insert into bh_list_resp (id_resp_a, nm_reposta) values (1, 'nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (2, 'luctus cum sociis natoque penatibus et magnis dis parturient montes');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (3, 'morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (4, 'lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (5, 'lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (6, 'iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (7, 'porta volutpat quam pede lobortis ligula sit amet eleifend pede');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (8, 'posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (9, 'gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (10, 'sed justo pellentesque viverra pede ac diam cras pellentesque volutpat');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (11, 'pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (12, 'et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (13, 'adipiscing elit proin risus praesent lectus vestibulum quam sapien varius');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (14, 'sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (15, 'in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (16, 'est risus auctor sed tristique in tempus sit amet sem');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (17, 'amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (18, 'ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (19, 'feugiat et eros vestibulum ac est lacinia nisi venenatis tristique');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (20, 'at velit eu est congue elementum in hac habitasse platea dictumst morbi');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (21, 'mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (22, 'lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (23, 'nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (24, 'tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (25, 'id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (26, 'nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (27, 'id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (28, 'eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (29, 'vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (30, 'massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (31, 'dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (32, 'congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (33, 'ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (34, 'nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (35, 'nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (36, 'penatibus et magnis dis parturient montes nascetur ridiculus mus etiam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (37, 'pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (38, 'eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (39, 'proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (40, 'faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (41, 'molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (42, 'augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (43, 'amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (44, 'luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (45, 'nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (46, 'venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (47, 'donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (48, 'aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (49, 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (50, 'ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (51, 'leo odio condimentum id luctus nec molestie sed justo pellentesque viverra');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (52, 'ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (53, 'donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (54, 'hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (55, 'platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (56, 'id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (57, 'at dolor quis odio consequat varius integer ac leo pellentesque');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (58, 'in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (59, 'blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (60, 'pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (61, 'suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (62, 'nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (63, 'ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (64, 'lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (65, 'nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (66, 'quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (67, 'sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (68, 'lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (69, 'leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (70, 'justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (71, 'diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (72, 'nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (73, 'quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (74, 'eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (75, 'at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (76, 'pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (77, 'viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (78, 'dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (79, 'risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (80, 'eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (81, 'in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (82, 'volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (83, 'libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (84, 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (85, 'ut nulla sed accumsan felis ut at dolor quis odio consequat varius');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (86, 'ac est lacinia nisi venenatis tristique fusce congue diam id ornare');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (87, 'odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (88, 'blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (89, 'interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (90, 'mauris enim leo rhoncus sed vestibulum sit amet cursus id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (91, 'accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (92, 'in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (93, 'turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (94, 'magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (95, 'imperdiet nullam orci pede venenatis non sodales sed tincidunt eu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (96, 'erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (97, 'lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (98, 'sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (99, 'morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (100, 'pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (101, 'in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (102, 'ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (103, 'iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (104, 'eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (105, 'lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (106, 'sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (107, 'augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (108, 'eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (109, 'vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (110, 'quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (111, 'interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (112, 'nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (113, 'ligula suspendisse ornare consequat lectus in est risus auctor sed');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (114, 'dictumst etiam faucibus cursus urna ut tellus nulla ut erat id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (115, 'sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (116, 'consequat in consequat ut nulla sed accumsan felis ut at dolor');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (117, 'quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (118, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (119, 'nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor eu pede');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (120, 'congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (121, 'phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (122, 'eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (123, 'morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (124, 'integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (125, 'sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (126, 'et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (127, 'in porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (128, 'suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (129, 'turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (130, 'ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (131, 'proin at turpis a pede posuere nonummy integer non velit donec diam neque');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (132, 'justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (133, 'bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (134, 'volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (135, 'ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (136, 'pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (137, 'quam sapien varius ut blandit non interdum in ante vestibulum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (138, 'rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (139, 'ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (140, 'nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (141, 'bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (142, 'maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (143, 'semper porta volutpat quam pede lobortis ligula sit amet eleifend pede');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (144, 'orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (145, 'tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (146, 'justo etiam pretium iaculis justo in hac habitasse platea dictumst');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (147, 'parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (148, 'erat quisque erat eros viverra eget congue eget semper rutrum nulla');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (149, 'justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (150, 'aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (151, 'semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (152, 'curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (153, 'varius ut blandit non interdum in ante vestibulum ante ipsum primis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (154, 'tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (155, 'felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (156, 'suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (157, 'tortor quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (158, 'mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (159, 'pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (160, 'vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (161, 'quisque ut erat curabitur gravida nisi at nibh in hac');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (162, 'cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (163, 'nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (164, 'sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (165, 'aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (166, 'vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (167, 'hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (168, 'duis at velit eu est congue elementum in hac habitasse platea');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (169, 'curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (170, 'sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (171, 'curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (172, 'et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (173, 'ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (174, 'ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (175, 'scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (176, 'augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (177, 'id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (178, 'ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (179, 'urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (180, 'ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (181, 'in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (182, 'habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (183, 'posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (184, 'non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (185, 'sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (186, 'velit donec diam neque vestibulum eget vulputate ut ultrices vel');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (187, 'at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (188, 'ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (189, 'quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (190, 'sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (191, 'posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (192, 'pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (193, 'felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (194, 'dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (195, 'cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (196, 'posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (197, 'id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (198, 'at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (199, 'mi in porttitor pede justo eu massa donec dapibus duis at velit eu est congue');
+insert into bh_list_resp (id_resp_a, nm_reposta) values (200, 'quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices');
+
+-- Tabela: bh_avaliacao - Massa de Dados - 200 linhas
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (1, 1, 52, 'justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula', 55, 'in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis', 3, TO_DATE('09/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (2, 2, 67, 'nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt', 77, 'ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec', 4, TO_DATE('01/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (3, 3, 64, 'rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia', 15, 'eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus', 3, TO_DATE('12/31/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (4, 4, 50, 'scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis mattis egestas metus', 39, 'erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus', 2, TO_DATE('04/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (5, 5, 61, 'tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum', 20, 'et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus', 1, TO_DATE('07/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (6, 6, 44, 'potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus', 73, 'magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum', 5, TO_DATE('05/20/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (7, 7, 93, 'integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla', 87, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt', 2, TO_DATE('12/24/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (8, 8, 75, 'curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit', 64, 'odio curabitur convallis duis consequat dui nec nisi volutpat eleifend', 2, TO_DATE('10/28/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (9, 9, 19, 'auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi', 100, 'hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam', 2, TO_DATE('10/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (10, 10, 2, 'mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante', 91, 'faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel', 4, TO_DATE('01/17/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (11, 11, 78, 'etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut', 13, 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac', 1, TO_DATE('01/31/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (12, 12, 82, 'duis at velit eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis', 53, 'interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus', 3, TO_DATE('03/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (13, 13, 8, 'maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi', 25, 'nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum', 4, TO_DATE('04/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (14, 14, 64, 'amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper', 38, 'nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem', 3, TO_DATE('11/29/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (15, 15, 23, 'quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis', 76, 'nulla dapibus dolor vel est donec odio justo sollicitudin ut', 1, TO_DATE('08/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (16, 16, 88, 'in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis', 51, 'risus semper porta volutpat quam pede lobortis ligula sit amet eleifend', 5, TO_DATE('07/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (17, 17, 51, 'diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam', 53, 'vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus', 1, TO_DATE('11/05/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (18, 18, 66, 'quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et', 42, 'dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti', 1, TO_DATE('12/24/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (19, 19, 82, 'natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum', 18, 'nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis', 5, TO_DATE('10/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (20, 20, 52, 'elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus', 38, 'duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam', 1, TO_DATE('05/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (21, 21, 5, 'elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu', 21, 'habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat', 3, TO_DATE('10/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (22, 22, 64, 'magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus', 92, 'duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor', 4, TO_DATE('02/21/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (23, 23, 17, 'nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris', 65, 'risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie', 4, TO_DATE('05/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (24, 24, 66, 'dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum', 9, 'justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique', 1, TO_DATE('01/04/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (25, 25, 64, 'varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel', 90, 'morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor', 2, TO_DATE('05/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (26, 26, 75, 'vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis', 71, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam', 1, TO_DATE('10/13/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (27, 27, 47, 'aliquam sit amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt', 16, 'venenatis turpis enim blandit mi in porttitor pede justo eu massa donec', 2, TO_DATE('09/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (28, 28, 54, 'enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur', 58, 'amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam nam tristique tortor', 1, TO_DATE('11/16/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (29, 29, 64, 'sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia', 9, 'erat quisque erat eros viverra eget congue eget semper rutrum nulla', 2, TO_DATE('05/13/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (30, 30, 19, 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus', 91, 'euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis', 1, TO_DATE('11/18/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (31, 31, 56, 'etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl', 69, 'suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl', 5, TO_DATE('08/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (32, 32, 47, 'non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit', 71, 'tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo', 1, TO_DATE('12/02/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (33, 33, 100, 'elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat', 45, 'ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget', 4, TO_DATE('09/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (34, 34, 53, 'felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu', 23, 'porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non', 2, TO_DATE('10/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (35, 35, 81, 'sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus at', 45, 'dui proin leo odio porttitor id consequat in consequat ut nulla sed', 2, TO_DATE('12/03/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (36, 36, 80, 'aliquet maecenas leo odio condimentum id luctus nec molestie sed justo', 58, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas', 2, TO_DATE('06/04/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (37, 37, 31, 'morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl', 14, 'ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta', 4, TO_DATE('07/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (38, 38, 56, 'duis ac nibh fusce lacus purus aliquet at feugiat non', 23, 'ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in', 3, TO_DATE('02/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (39, 39, 86, 'sapien placerat ante nulla justo aliquam quis turpis eget elit', 46, 'molestie sed justo pellentesque viverra pede ac diam cras pellentesque', 3, TO_DATE('07/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (40, 40, 9, 'dictumst etiam faucibus cursus urna ut tellus nulla ut erat id', 85, 'nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet', 2, TO_DATE('05/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (41, 41, 20, 'integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor', 82, 'augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet', 1, TO_DATE('06/10/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (42, 42, 77, 'pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat', 86, 'ipsum ac tellus semper interdum mauris ullamcorper purus sit amet', 2, TO_DATE('06/29/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (43, 43, 4, 'non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa', 14, 'augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante', 1, TO_DATE('11/26/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (44, 44, 7, 'phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque', 61, 'ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu', 4, TO_DATE('12/01/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (45, 45, 38, 'in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec', 22, 'est phasellus sit amet erat nulla tempus vivamus in felis eu sapien', 1, TO_DATE('09/17/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (46, 46, 93, 'cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque', 44, 'sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis', 5, TO_DATE('07/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (47, 47, 36, 'convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien', 40, 'non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae', 2, TO_DATE('08/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (48, 48, 78, 'mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in', 31, 'erat curabitur gravida nisi at nibh in hac habitasse platea', 4, TO_DATE('11/30/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (49, 49, 86, 'pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit', 11, 'semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci', 3, TO_DATE('01/10/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (50, 50, 60, 'fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet', 52, 'habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo', 4, TO_DATE('12/26/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (51, 51, 6, 'sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam', 13, 'eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus', 5, TO_DATE('05/21/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (52, 52, 44, 'proin at turpis a pede posuere nonummy integer non velit donec diam neque', 58, 'ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies', 1, TO_DATE('11/06/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (53, 53, 32, 'rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo', 85, 'ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 3, TO_DATE('12/10/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (54, 54, 75, 'in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod', 67, 'luctus nec molestie sed justo pellentesque viverra pede ac diam cras', 1, TO_DATE('06/21/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (55, 55, 5, 'vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper', 67, 'ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi', 2, TO_DATE('12/08/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (56, 56, 9, 'eu massa donec dapibus duis at velit eu est congue', 36, 'adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis', 3, TO_DATE('08/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (57, 57, 9, 'at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue', 75, 'sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula', 4, TO_DATE('09/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (58, 58, 69, 'orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat', 80, 'enim blandit mi in porttitor pede justo eu massa donec', 2, TO_DATE('07/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (59, 59, 75, 'nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu', 42, 'enim blandit mi in porttitor pede justo eu massa donec dapibus duis', 1, TO_DATE('07/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (60, 60, 29, 'dolor sit amet consectetuer adipiscing elit proin interdum mauris non', 51, 'diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat', 3, TO_DATE('11/04/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (61, 61, 25, 'justo eu massa donec dapibus duis at velit eu est congue elementum in hac habitasse platea', 4, 'praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede', 3, TO_DATE('05/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (62, 62, 30, 'libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas', 26, 'sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium', 5, TO_DATE('09/30/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (63, 63, 17, 'semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis', 94, 'donec semper sapien a libero nam dui proin leo odio porttitor id', 3, TO_DATE('08/20/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (64, 64, 33, 'elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum', 83, 'metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero', 4, TO_DATE('12/11/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (65, 65, 93, 'pede justo eu massa donec dapibus duis at velit eu est congue', 15, 'rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non', 1, TO_DATE('12/30/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (66, 66, 5, 'erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea', 100, 'cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien', 2, TO_DATE('09/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (67, 67, 49, 'convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet', 13, 'pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra', 3, TO_DATE('01/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (68, 68, 36, 'in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut', 28, 'consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus', 3, TO_DATE('12/01/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (69, 69, 83, 'aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum', 92, 'duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim', 5, TO_DATE('09/27/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (70, 70, 28, 'sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce', 59, 'nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante', 5, TO_DATE('01/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (71, 71, 6, 'leo odio porttitor id consequat in consequat ut nulla sed accumsan felis', 24, 'rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed', 2, TO_DATE('10/14/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (72, 72, 35, 'amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus', 16, 'varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam', 4, TO_DATE('08/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (73, 73, 81, 'libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt', 67, 'leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis', 4, TO_DATE('08/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (74, 74, 66, 'nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit', 72, 'ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam', 3, TO_DATE('02/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (75, 75, 71, 'ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi', 44, 'eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum', 2, TO_DATE('04/10/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (76, 76, 66, 'id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie', 5, 'duis faucibus accumsan odio curabitur convallis duis consequat dui nec', 5, TO_DATE('02/06/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (77, 77, 25, 'ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus', 95, 'dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id', 5, TO_DATE('05/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (78, 78, 66, 'sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac', 59, 'elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum', 3, TO_DATE('05/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (79, 79, 86, 'tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel dapibus', 19, 'pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus', 3, TO_DATE('01/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (80, 80, 6, 'sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam', 37, 'enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis', 1, TO_DATE('09/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (81, 81, 90, 'consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor', 51, 'enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus', 4, TO_DATE('06/17/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (82, 82, 31, 'felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu', 82, 'blandit mi in porttitor pede justo eu massa donec dapibus', 4, TO_DATE('05/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (83, 83, 29, 'duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit', 26, 'orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam', 4, TO_DATE('04/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (84, 84, 3, 'convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis', 36, 'vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula', 2, TO_DATE('05/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (85, 85, 100, 'dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat', 94, 'suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet', 1, TO_DATE('08/15/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (86, 86, 61, 'ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices', 9, 'felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam', 3, TO_DATE('01/31/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (87, 87, 29, 'sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan', 22, 'vulputate luctus cum sociis natoque penatibus et magnis dis parturient', 2, TO_DATE('12/03/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (88, 88, 14, 'ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem', 5, 'libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate', 5, TO_DATE('03/15/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (89, 89, 12, 'convallis morbi odio odio elementum eu interdum eu tincidunt in', 49, 'nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy', 4, TO_DATE('11/29/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (90, 90, 68, 'vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo', 65, 'magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget', 2, TO_DATE('08/23/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (91, 91, 45, 'lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo', 64, 'at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut', 3, TO_DATE('11/08/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (92, 92, 98, 'sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam', 79, 'aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula', 3, TO_DATE('04/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (93, 93, 22, 'potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus', 34, 'nam congue risus semper porta volutpat quam pede lobortis ligula', 4, TO_DATE('05/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (94, 94, 59, 'odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla', 59, 'nunc viverra dapibus nulla suscipit ligula in lacus curabitur at', 3, TO_DATE('09/08/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (95, 95, 57, 'amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id', 75, 'id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce', 5, TO_DATE('02/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (96, 96, 80, 'rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio', 36, 'commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris', 2, TO_DATE('06/23/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (97, 97, 27, 'vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare', 82, 'molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae', 3, TO_DATE('01/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (98, 98, 58, 'amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus', 31, 'sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo', 5, TO_DATE('05/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (99, 99, 22, 'mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue', 88, 'sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue', 2, TO_DATE('03/08/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (100, 100, 41, 'ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam', 84, 'nulla neque libero convallis eget eleifend luctus ultricies eu nibh', 4, TO_DATE('08/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (101, 101, 10, 'orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus', 88, 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit', 1, TO_DATE('02/10/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (102, 102, 39, 'nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo', 97, 'morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede', 5, TO_DATE('01/26/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (103, 103, 75, 'vitae nisi nam ultrices libero non mattis pulvinar nulla pede', 21, 'consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in', 2, TO_DATE('03/04/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (104, 104, 80, 'sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed', 61, 'nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl', 5, TO_DATE('03/20/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (105, 105, 45, 'convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet', 43, 'vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur', 3, TO_DATE('02/28/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (106, 106, 5, 'quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec', 81, 'sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus', 3, TO_DATE('11/21/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (107, 107, 2, 'viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat', 59, 'posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi', 3, TO_DATE('05/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (108, 108, 30, 'orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis', 4, 'sed nisl nunc rhoncus dui vel sem sed sagittis nam', 4, TO_DATE('05/26/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (109, 109, 93, 'velit vivamus vel nulla eget eros elementum pellentesque quisque porta', 24, 'congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum', 3, TO_DATE('08/25/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (110, 110, 32, 'a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor', 35, 'consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus', 3, TO_DATE('09/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (111, 111, 37, 'congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci', 18, 'ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim', 3, TO_DATE('01/21/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (112, 112, 90, 'elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus', 54, 'etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris', 5, TO_DATE('01/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (113, 113, 15, 'molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate', 98, 'augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna', 5, TO_DATE('01/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (114, 114, 17, 'pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet', 42, 'vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis', 2, TO_DATE('07/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (115, 115, 97, 'enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum', 27, 'donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in', 3, TO_DATE('06/10/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (116, 116, 74, 'eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor', 21, 'odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis', 5, TO_DATE('06/24/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (117, 117, 42, 'sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh', 85, 'natoque penatibus et magnis dis parturient montes nascetur ridiculus mus', 3, TO_DATE('03/14/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (118, 118, 4, 'porttitor pede justo eu massa donec dapibus duis at velit eu est congue elementum in', 23, 'non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem', 5, TO_DATE('09/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (119, 119, 42, 'fusce posuere felis sed lacus morbi sem mauris laoreet ut', 3, 'ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper', 5, TO_DATE('03/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (120, 120, 42, 'nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac', 21, 'ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam', 2, TO_DATE('08/31/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (121, 121, 65, 'at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at', 79, 'cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend', 5, TO_DATE('11/30/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (122, 122, 9, 'vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede', 83, 'volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in', 5, TO_DATE('01/28/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (123, 123, 21, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis', 93, 'amet diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu', 5, TO_DATE('03/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (124, 124, 42, 'vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla', 86, 'sed tincidunt eu felis fusce posuere felis sed lacus morbi', 1, TO_DATE('12/30/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (125, 125, 98, 'aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus', 73, 'in faucibus orci luctus et ultrices posuere cubilia curae donec', 1, TO_DATE('12/07/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (126, 126, 100, 'luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat', 69, 'nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper', 3, TO_DATE('02/13/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (127, 127, 54, 'lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa', 10, 'arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula', 4, TO_DATE('03/21/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (128, 128, 75, 'donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit', 26, 'vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus', 3, TO_DATE('06/24/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (129, 129, 62, 'tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis', 71, 'imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor', 1, TO_DATE('03/20/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (130, 130, 20, 'maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat', 97, 'platea dictumst morbi vestibulum velit id pretium iaculis diam erat', 3, TO_DATE('12/09/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (131, 131, 72, 'enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus', 4, 'ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit', 5, TO_DATE('04/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (132, 132, 94, 'posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien', 65, 'malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit', 5, TO_DATE('07/15/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (133, 133, 60, 'quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie', 64, 'odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus', 3, TO_DATE('03/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (134, 134, 3, 'amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu', 20, 'urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi', 1, TO_DATE('10/24/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (135, 135, 60, 'morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum', 6, 'aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum', 4, TO_DATE('03/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (136, 136, 35, 'quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut', 11, 'iaculis justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus', 1, TO_DATE('10/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (137, 137, 43, 'nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin', 46, 'in eleifend quam a odio in hac habitasse platea dictumst', 5, TO_DATE('06/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (138, 138, 73, 'urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis', 80, 'donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis', 2, TO_DATE('10/30/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (139, 139, 91, 'sed augue aliquam erat volutpat in congue etiam justo etiam', 94, 'vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat', 5, TO_DATE('07/31/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (140, 140, 15, 'morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc', 46, 'nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet', 2, TO_DATE('03/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (141, 141, 10, 'curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor', 35, 'hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent', 4, TO_DATE('07/24/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (142, 142, 12, 'molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac', 16, 'lectus pellentesque at nulla suspendisse potenti cras in purus eu magna', 2, TO_DATE('05/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (143, 143, 22, 'nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum', 22, 'lectus suspendisse potenti in eleifend quam a odio in hac', 3, TO_DATE('09/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (144, 144, 30, 'justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante', 74, 'vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor', 3, TO_DATE('01/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (145, 145, 49, 'blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt', 18, 'consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio', 1, TO_DATE('11/28/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (146, 146, 19, 'morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum', 91, 'blandit mi in porttitor pede justo eu massa donec dapibus duis at velit', 1, TO_DATE('02/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (147, 147, 43, 'commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem', 94, 'rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet', 3, TO_DATE('12/02/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (148, 148, 1, 'eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut', 34, 'nibh ligula nec sem duis aliquam convallis nunc proin at', 4, TO_DATE('11/01/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (149, 149, 97, 'aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices', 100, 'nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare', 2, TO_DATE('03/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (150, 150, 78, 'dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula', 88, 'condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum', 5, TO_DATE('10/25/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (151, 151, 50, 'eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus', 13, 'diam in magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus', 2, TO_DATE('05/03/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (152, 152, 69, 'laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta', 3, 'elit ac nulla sed vel enim sit amet nunc viverra', 1, TO_DATE('03/23/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (153, 153, 50, 'id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et', 77, 'mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit', 1, TO_DATE('05/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (154, 154, 73, 'diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum', 4, 'lorem ipsum dolor sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum', 2, TO_DATE('07/22/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (155, 155, 35, 'nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non', 9, 'justo etiam pretium iaculis justo in hac habitasse platea dictumst etiam faucibus cursus', 1, TO_DATE('05/20/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (156, 156, 14, 'sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis', 40, 'viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra', 4, TO_DATE('10/21/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (157, 157, 34, 'luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis', 60, 'vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit', 1, TO_DATE('12/12/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (158, 158, 38, 'eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing', 95, 'bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis', 3, TO_DATE('11/13/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (159, 159, 95, 'convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum', 57, 'proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante', 4, TO_DATE('12/11/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (160, 160, 69, 'lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in', 63, 'in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus', 3, TO_DATE('07/14/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (161, 161, 44, 'rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna', 89, 'dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis', 5, TO_DATE('08/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (162, 162, 51, 'turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget', 82, 'mi pede malesuada in imperdiet et commodo vulputate justo in blandit', 1, TO_DATE('07/05/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (163, 163, 70, 'ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel', 6, 'eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras', 3, TO_DATE('04/13/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (164, 164, 33, 'ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet', 39, 'duis aliquam convallis nunc proin at turpis a pede posuere nonummy', 1, TO_DATE('05/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (165, 165, 28, 'nulla quisque arcu libero rutrum ac lobortis vel dapibus at diam', 72, 'blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor', 3, TO_DATE('01/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (166, 166, 69, 'cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien', 75, 'sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in', 2, TO_DATE('11/05/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (167, 167, 82, 'quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas', 47, 'libero non mattis pulvinar nulla pede ullamcorper augue a suscipit', 5, TO_DATE('05/28/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (168, 168, 39, 'a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas', 26, 'sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at', 4, TO_DATE('08/11/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (169, 169, 68, 'vestibulum quam sapien varius ut blandit non interdum in ante vestibulum', 66, 'eu nibh quisque id justo sit amet sapien dignissim vestibulum', 1, TO_DATE('09/28/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (170, 170, 2, 'viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper', 47, 'elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in', 3, TO_DATE('11/12/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (171, 171, 19, 'ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus', 87, 'potenti cras in purus eu magna vulputate luctus cum sociis', 4, TO_DATE('03/27/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (172, 172, 100, 'vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat', 23, 'sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis', 2, TO_DATE('12/22/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (173, 173, 39, 'adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante', 94, 'dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non', 3, TO_DATE('11/27/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (174, 174, 72, 'non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce', 87, 'dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium', 2, TO_DATE('03/07/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (175, 175, 92, 'massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet', 25, 'elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus', 5, TO_DATE('12/13/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (176, 176, 22, 'sit amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum', 7, 'ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit', 1, TO_DATE('05/14/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (177, 177, 32, 'integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi', 28, 'enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit', 5, TO_DATE('05/17/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (178, 178, 14, 'eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit', 25, 'mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate', 2, TO_DATE('08/18/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (179, 179, 6, 'pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate', 71, 'purus phasellus in felis donec semper sapien a libero nam dui', 2, TO_DATE('08/02/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (180, 180, 83, 'nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis', 16, 'montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus', 3, TO_DATE('12/20/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (181, 181, 88, 'et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient', 100, 'accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit', 3, TO_DATE('12/04/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (182, 182, 5, 'nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa', 90, 'hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget', 5, TO_DATE('04/24/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (183, 183, 17, 'ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer', 82, 'in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit', 4, TO_DATE('10/29/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (184, 184, 62, 'dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus', 20, 'orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae', 1, TO_DATE('09/06/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (185, 185, 51, 'pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie hendrerit', 60, 'luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce', 4, TO_DATE('05/29/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (186, 186, 3, 'vestibulum ante ipsum primis in faucibus orci luctus et ultrices', 4, 'mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus', 1, TO_DATE('09/23/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (187, 187, 100, 'in eleifend quam a odio in hac habitasse platea dictumst maecenas', 10, 'consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum', 5, TO_DATE('05/31/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (188, 188, 78, 'mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar', 17, 'vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate', 2, TO_DATE('07/13/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (189, 189, 44, 'enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis', 34, 'id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras', 5, TO_DATE('02/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (190, 190, 19, 'platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante', 64, 'mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci', 1, TO_DATE('02/01/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (191, 191, 33, 'rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta', 93, 'potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus', 4, TO_DATE('09/16/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (192, 192, 46, 'sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet', 61, 'feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut', 4, TO_DATE('01/19/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (193, 193, 80, 'integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum', 36, 'pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit', 5, TO_DATE('10/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (194, 194, 54, 'eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante', 3, 'mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar', 5, TO_DATE('06/29/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (195, 195, 100, 'magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus', 75, 'ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti', 4, TO_DATE('01/09/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (196, 196, 25, 'lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at', 20, 'rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor', 2, TO_DATE('01/15/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (197, 197, 67, 'turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum', 15, 'quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus', 5, TO_DATE('09/12/2019', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (198, 198, 54, 'quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus', 24, 'tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu', 5, TO_DATE('11/29/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (199, 199, 89, 'condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan', 80, 'eu est congue elementum in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo', 4, TO_DATE('10/27/2018', 'mm/dd/yyyy'));
+insert into bh_avaliacao (id_avaliacao, id_usuario, cd_resp_a, nm_resp_a, cd_resp_b, nm_resp_b, cd_estrela, dt_avaliacao) values (200, 200, 18, 'neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac', 40, 'bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce', 1, TO_DATE('02/09/2019', 'mm/dd/yyyy'));
+
+
+
+
+
+
+
+
